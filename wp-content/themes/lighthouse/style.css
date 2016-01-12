@@ -1,0 +1,42 @@
+/*
+Theme name: Lighthouse
+Author: Louise Olofsson
+Version: 1.0
+Description: This is my lighthouse theme!
+Text Domain: lh
+*/
+
+body{
+    background: #808080;
+}
+
+body.custom-background{
+    background-size: cover;
+}
+
+
+/* -------------------------- HEADER - navbar ---------------------------- */
+
+.navbar-logo img {
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* --------------------------- FIRST CONTENT ------------------------------*/
+
+.first-content{
+    height: 500px;
+    width: 100%;
+}
+
+
+/* --------------------------- SECOND CONTENT -----------------------------*/
+
+.second-content{
+    height: 500px;
+    background: #fff;
+    width: 100%;
+}
