@@ -25,7 +25,7 @@ function lh_description_widgets_init() {
     register_sidebar( array(
         'name'          => __( 'Description Widget Sidebar', 'lh' ),
         'id'            => 'description-widget-sidebar',
-        'before_widget' => '<div class="description-widget-div">',
+        'before_widget' => '<div class="description-widget">',
         'after_widget'  => '</div>'
     ) );
 }

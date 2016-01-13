@@ -17,6 +17,12 @@ body.custom-background{
 
 /* -------------------------- HEADER - navbar ---------------------------- */
 
+.navbar{
+    background: #262427;
+    border-radius: 0px;
+    border: none;
+}
+
 .navbar-logo img {
     height: 30px;
     width: 30px;
@@ -32,11 +38,49 @@ body.custom-background{
     width: 100%;
 }
 
+.first-content-heading{
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+}
 
-/* --------------------------- SECOND CONTENT -----------------------------*/
+
+/* --------------------------- SECOND CONTENT - area for description widget -----------------------------*/
 
 .second-content{
-    height: 500px;
-    background: #fff;
+    background: #262427;
     width: 100%;
+    margin: 0 auto;
+    padding: 110px 60px;
+    text-align: center;
+}
+
+    .description-widget{
+        background: #EFE19A;
+        margin: 20px 20px;
+        display: inline-block;
+        padding: 60px 20px 60px 20px;
+        width: 300px;
+        min-height: 200px;
+        text-align: center;
+        border: 1px solid dimgray;
+    }
+
+        .description-widget-title{
+            color: #fff;
+        }
+
+        .description-widget-textarea{
+            color: #fff;
+        }
+
+
+/* --------------------------- THIRD CONTENT - area for description widget -----------------------------*/
+
+.third-content {
+    background: #EFE19A;
+    width: 100%;
+    margin: 0 auto;
+    padding: 110px 60px;
+    text-align: center;
 }
