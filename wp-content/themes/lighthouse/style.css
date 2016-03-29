@@ -2,85 +2,712 @@
 Theme name: Lighthouse
 Author: Louise Olofsson
 Version: 1.0
-Description: This is my lighthouse theme!
+Description: This is my lighthouse theme! A simple one-page theme that you can apply wooCommerce to and have a online shop.
 Text Domain: lh
 */
 
 body{
-    background: #808080;
+    background: #fff; /* EEE9F0 */
+    font-family: 'Raleway', sans-serif;
+    padding-top: 58px;
 }
 
 body.custom-background{
     background-size: cover;
 }
 
+@media screen and (min-width: 1200px){
+    .container{
+    }
+}
 
-/* -------------------------- HEADER - navbar ---------------------------- */
+ul{
+    -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
+}
+
+ins {
+    text-decoration: none;
+}
+
+
+/* this is what bootstrap sets, 750px
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+*/
+
+/* ---------------------------- HEADER - navbar ---------------------------- */
 
 .navbar{
-    background: #262427;
-    border-radius: 0px;
-    border: none;
+    background: #fff; /* grey: EDEDED . 262427 */
+    border-radius: 0;
+    border-bottom: 1px solid #b9b9b9;
+    padding: 15px 0;
+    margin-bottom: 0;
 }
 
-.navbar-logo img {
-    height: 30px;
-    width: 30px;
-    background-position: center;
-    overflow: hidden;
-    margin-top: 10px;
+.navbar-header{
+
 }
 
-/* --------------------------- FIRST CONTENT ------------------------------*/
+    .navbar-logo img{
+        height: 30px;
+        max-width: 100px;
+        background-position: center;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+/* ------------------------------ FIRST CONTENT - HEADING & SUBHEADING ------------------------------ */
 
 .first-content{
-    height: 500px;
+    min-height: 550px;
     width: 100%;
+    /*background: rgba(0, 0, 0, 0.3);*/
 }
 
-.first-content-heading{
-    text-align: center;
-    color: #fff;
-    margin-top: 80px;
+.firstContentRow{
+    margin-bottom: 100px;
 }
 
+    .first-content-heading{
+        text-align: center;
+        color: #fff;
+        margin-top: 80px;
+    }
 
-/* --------------------------- SECOND CONTENT - area for description widget -----------------------------*/
+    .firstContentHeadingH1{
+        font-size: 70px;
+        font-weight: 600;
+    }
+
+/* ------------------------------ SECOND CONTENT - COMPANY QUALITIES ------------------------------ */
 
 .second-content{
+    background: #FAFAFA; /* mörkgrå: 262427 */
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .second-content-heading-subheading{
+        text-align: center;
+        color: #5C5C5C;
+        margin-bottom: 40px;
+        margin-top: 90px;
+    }
+
+        .secondContentHeadingH2{
+            font-weight: 900;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-top: 35px;
+        }
+
+        .secondContentSubheading{
+            font-size: 15px;
+        }
+
+    .company_qual{
+        padding: 35px;
+        color: #5C5C5C;
+        margin-bottom: 60px;
+    }
+
+        .qual_pic{
+            margin-bottom: 20px;
+        }
+
+        .secondContentQualTitle{
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+            .border-bottom{
+                border-bottom: 2px solid #1aba9d;
+                padding-bottom: 10px;
+                margin-bottom: 25px;
+                display: inline-block;
+            }
+
+/* -------------------------------- THIRD CONTENT - ABOUT  -------------------------------- */
+
+.third-content {
     background: #262427;
     width: 100%;
     margin: 0 auto;
-    padding: 110px 60px;
+    /*padding: 110px 60px;*/
     text-align: center;
 }
 
-    .description-widget{
-        background: #EFE19A;
-        margin: 20px 20px;
+    .about-darkgrey{
+        background: #262427;
+        padding: 145px 67px;
+    }
+
+    .about-white{
+        background: #fff;
+        padding: 145px 67px;
+    }
+
+        .thirdContentAboutTitle{
+            color: #808080; /* lighter grey b9b9b9 */
+            margin-bottom: 15px;
+            margin-top: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+            .border-bottom-about{
+                border-bottom: 1px solid #5C5C5C;
+                margin-bottom: 20px;
+            }
+
+        .thirdContentAboutText{
+            color: #808080;
+        }
+
+/* This is from the generated class : $before_widget
+    #lh-description-widget-2,
+    #lh-description-widget-3,
+    #lh-description-widget-4{
         display: inline-block;
-        padding: 60px 20px 60px 20px;
-        width: 300px;
+        width: 445px;
         min-height: 200px;
         text-align: center;
-        border: 1px solid dimgray;
+        padding: 50px 30px;
+    }
+
+        #lh-description-widget-2,
+        #lh-description-widget-4{
+            background-color: #262427;
+        }
+*/
+
+/*
+DESCRIPTION WIDGET CSS - not used
+    .description-widget{
+        margin: 20px 20px;
+        display: inline-block;
+        width: 445px;
+        min-height: 200px;
+        text-align: center;
+        padding: 50px 30px;
     }
 
         .description-widget-title{
-            color: #fff;
+            color: #000;
         }
 
         .description-widget-textarea{
-            color: #fff;
+            color: #000;
         }
 
+.description-widget:nth-child(1),
+.description-widget:nth-child(3){
+    background-color: #262427;
+}
 
-/* --------------------------- THIRD CONTENT - area for description widget -----------------------------*/
+.description-widget:nth-child(1) .description-widget-title,
+.description-widget:nth-child(3) .description-widget-title{
+    color: #c0a375;
+}
 
-.third-content {
-    background: #EFE19A;
+.description-widget:nth-child(1) .description-widget-textarea,
+.description-widget:nth-child(3) .description-widget-textarea{
+    color: #fff;
+}
+*/
+
+/* -------------------------------- FOURTH CONTENT - FIRST INTRODUCE WIDGET AREA (sidebar)  -------------------------------- */
+
+.fourth-content{
+    background-color: rgba(155,155,155,0.5);
     width: 100%;
     margin: 0 auto;
-    padding: 110px 60px;
+    padding: 150px 0;
     text-align: center;
 }
+
+    .introduce-widget{
+    }
+
+        .introduceTextarea{
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        .outerDivBtn{
+            padding-bottom: 20px;
+        }
+
+            .introduceButton{
+                /*background: #262427;*/
+                text-align: center;
+                padding: 15px 15px;
+                color: #fff;
+                font-size: 15px;
+                text-transform: uppercase;
+                box-shadow: 1px 1px 3px #000;
+                border-radius: 5px;
+                text-decoration: none;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+                .introduceButton:visited{
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                .introduceButton:hover{
+                    color: #333;
+                    text-decoration: none;
+                }
+
+                .introduceButton:active{
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+
+/* -------------------------------- FIFTH CONTENT - TEAM WIDGET AREA (sidebar) -------------------------------- */
+
+.fifth-content{
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+    color: #5C5C5C;
+}
+
+    .teamTitleH3{
+        font-size: 40px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .teamSubtitle{
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .team-widget-sidebar-row{
+        margin-bottom: 30px;
+    }
+
+    .teamMemberName{
+        text-transform: uppercase;
+        font-size: 17px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+
+    hr.teamHr{
+        width: 90px;
+        border: 1px solid #1aba9d;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .team-widget-position{
+        font-weight: 600;
+    }
+
+    .two_team_members{
+
+    }
+
+
+/* --------------------------------- SIXTH CONTENT - SECOND INTRODUCE WIDGET AREA (sidebar) -------------------------------- */
+
+.sixth-content{
+    background: #262427;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+/* --------------------------------- SEVENTH CONTENT - PIC & TEXT --------------------------------- */
+
+.seventh-content{
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    color: #5C5C5C;
+}
+
+    .secondRow{
+        margin-top: 20px;
+    }
+
+    .seventhContentH3{
+        font-size: 30px;
+    }
+
+    .thirdRow{
+        margin-top: 100px;
+    }
+
+        .thirdRowText{
+            text-align: right;
+        }
+
+    .seventhContentPic{
+    }
+
+/* --------------------------------- EIGHTH CONTENT --------------------------------- */
+
+.eighth-content{
+    /*background: rgba(62, 62, 62, 0.7);*/
+    background: rgba(62, 62, 62, 0.5);
+    width: 100%;
+    margin: 0 auto;
+    padding: 210px 60px;
+    text-align: center;
+}
+
+/* --------------------------------- SAMPLE PAGE --------------------------------- */
+
+.sample-page{
+    height: 500px;
+}
+
+/* --------------------------------- ARCHIVE PAGE --------------------------------- */
+
+.archive-article{
+    display: inline-block;
+    width: 350px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.archive-template-ul li{
+    list-style: none;
+}
+
+
+/* --------------------------------- 404 --------------------------------- */
+
+.PageNotFound{
+    height: 344px;
+}
+
+/* --------------------------------- SHOP --------------------------------- */
+
+
+    .page-title{
+        margin-bottom: 20px;
+        font-size: 3.5em;
+        margin-top: 50px;
+    }
+
+    .woocommerce-result-count{
+    }
+
+    .woocommerce-ordering{
+    }
+
+    .orderby{
+        height: 40px;
+        width: 200px;
+    }
+
+    .product-col{
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+        .attachment-shop_catalog{
+            height: 280px;
+            width: 262px;
+        }
+
+        .products a:hover{
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .products h3{
+            color: #3d3d3d;
+        }
+
+        .price{
+            color: #3d3d3d;
+        }
+
+            .amount{
+            }
+
+        span.onsale {
+            position: absolute;
+            padding: 20px;
+            margin: 5px 5px;
+            color: #fff;
+            text-align: center;
+            background-color: #E72D2D;
+            border-radius: 100%;
+        }
+
+        .add_to_cart_button{
+            color: #ffffff;
+            background-color: #aaaaaa;
+            height: 40px;
+            width: 100%;
+            display: block;
+            margin: 20px 0 0 0;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        a.added_to_cart.wc-forward {
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            background-color: #aaaaaa;
+            width: 263px;
+            padding: 10px;
+            right: 15px;
+        }
+
+/* Variable product */
+.product_type_variable{
+    margin-top: 50px;
+}
+
+/* Pagenumber at the bottom of /shop */
+.page-numbers{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 17px;
+    }
+
+        .page-numbers li{
+            list-style: none;
+            display: inline-block;
+        }
+
+            .page-numbers a:hover{
+                text-decoration: none;
+            }
+
+
+
+/* --------------------------------- SINGLE PRODUCT --------------------------------- */
+
+/* The entire div that contains image + summary */
+.product{
+    margin-top: 40px;
+}
+
+/* Success message from woocommerce */
+.woocommerce-message {
+    padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #515151;
+    border-top: 3px solid #1aba9d;
+    list-style: none;
+    width: auto;
+    word-wrap: break-word;
+}
+
+/* Error message from woocommerce */
+.woocommerce-error{
+    padding: 1em 2em 1em 3.5em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #515151;
+    border-top: 3px solid #E72D2D;
+    list-style: none;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.images{
+    display: inline-block;
+    vertical-align: top;
+    margin: 40px 20px 20px 0;
+}
+
+    .attachment-shop_single{
+        max-height: 400px;
+        max-width: 400px;
+    }
+
+    .summary{
+    display: inline-block;
+    margin: 40px 20px 20px 50px;
+    }
+
+/* Thumbnail image (gallery) on a single product page */
+.thumbnails{
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .attachment-shop_thumbnail{
+        display: inline-block;
+        height: 100px;
+        max-width: 100px;
+    }
+
+/* SELECT - the attributes on a product (size, color, etc) */
+.label label{
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.value select{
+    height: 40px;
+    width: 200px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* The entire add-to-cart + qty 'area' */
+.woocommerce-variation-add-to-cart{
+    margin-top: 20px;
+}
+
+    /* SELECT - amount of items */
+    .quantity{
+        display: inline-block;
+    }
+
+        .qty{
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+    /* ADD TO CART BTN */
+    .single_add_to_cart_button{
+        display: inline-block;
+        height: 40px;
+        width: 200px;
+        vertical-align: top;
+        background-color: #1aba9d;
+        color: #fff;
+        border: none;
+    }
+
+/* TABS - Description, Additional Information */
+ul.tabs{
+    list-style: none;
+    padding: 0 0 0 14px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+    ul.tabs:before{
+        position: absolute;
+        content: " ";
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid #dfdbdf;
+        z-index: 1;
+    }
+
+ul.tabs li {
+    border: 1px solid #ddd;
+    background: #f2f2f2;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0 -5px;
+    padding: .5em 1em;
+}
+
+    ul.tabs li.active {
+        background: #fff;
+        z-index: 2;
+        border-bottom-color: #fff;
+    }
+
+    ul.tabs li a{
+        font-weight: 700;
+        color: #5e5e5e;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        text-decoration: none;
+    }
+
+table.shop_attributes {
+    border: 0;
+    border-top: 1px dotted rgba(0, 0, 0, .1);
+    margin-bottom: 1.618em;
+    width: 100%;
+}
+
+    table.shop_attributes .alt td,
+    table.shop_attributes .alt th {
+        background: rgba(0,0,0,.025);
+    }
+
+    table.shop_attributes th {
+        width: 150px;
+        font-weight: 700;
+        padding: 8px;
+        border-top: 0;
+        border-bottom: 1px dotted rgba(0,0,0,.1);
+        margin: 0;
+        line-height: 1.5em;
+    }
+
+    table.shop_attributes td {
+        font-style: italic;
+        padding: 0;
+        border-top: 0;
+        border-bottom: 1px dotted rgba(0,0,0,.1);
+        margin: 0;
+        line-height: 1.5em;
+    }
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.footer-content{
+    background: #262427;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    display: inline-block;
+    color: #888888;
+}
+
+    .footer-widgetarea-1,
+    .footer-widgetarea-2,
+    .footer-widgetarea-3,
+    .footer-widgetarea-4{
+        display: inline-block;
+        padding-left: 20px;
+    }
+
+        .social-widget{
+            /*background: #262427;*/
+            margin: 0 30px 20px 10px;
+            display: inline-block;
+            /*padding: 60px 20px 60px 20px;*/
+            text-align: center;
+            border: none;
+        }

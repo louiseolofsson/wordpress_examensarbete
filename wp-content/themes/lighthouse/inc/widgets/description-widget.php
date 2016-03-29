@@ -6,7 +6,7 @@ class Description_Widget extends WP_Widget {
     public function __construct(){
         parent::__construct(
         // Base ID of your widget
-            'lh-widget',
+            'lh-description-widget',
             // Widget name that will appear for the user to see
             __( 'Description Widget', 'lh' ),
 
@@ -19,10 +19,16 @@ class Description_Widget extends WP_Widget {
 
         extract( $args );
 
-        echo $before_widget;
+        //echo $before_widget;
 
         ?>
 
+        <div class="col-md-3 description-widget">
+
+            <?php if ( $featured_image = @$instance['featured_image'] ) : ?>
+                <!--<div class="service-image" style="background-image: url(<?php echo $featured_image ?>);"></div>-->
+                <img src="<?php echo esc_url( $featured_image ); ?>" style="height: 40px; width: 40px;">
+            <?php endif; ?>
             <?php if( $description_head = @$instance[ 'description-head' ] ) : ?> <!-- @ gör så att vi kollar om $instance['title'] finns, som en if -->
                 <div class="description-widget-title"><h2><?php echo $description_head; ?></h2></div>
             <?php endif; ?>
@@ -30,16 +36,17 @@ class Description_Widget extends WP_Widget {
                 <div class="description-widget-textarea"><p><?php echo $description_textarea; ?></p></div>
             <?php endif; ?>
 
+        </div>
 
         <?php
 
-        echo $after_widget;
+        //echo $after_widget;
     }
 
     public function update( $new_instance, $old_instance ){
         $instance = $old_instance;
 
-        $instance[ 'description-image' ] = esc_url_raw( $new_instance[ 'description-image' ] );
+        $instance[ 'featured_image' ] = esc_url_raw( $new_instance[ 'featured_image' ] );
         $instance[ 'description-head' ] = strip_tags( $new_instance[ 'description-head' ] );
         $instance[ 'description-textarea' ] = strip_tags( $new_instance[ 'description-textarea' ] );
 
@@ -55,14 +62,10 @@ class Description_Widget extends WP_Widget {
      */
     public function form( $instance ) {
 
-        // $description_image = $instance[ 'description-image' ];
-        //$description_head = esc_attr( $instance[ 'description-head' ]);
-        //$description_textarea = esc_attr( $instance[ 'description-textarea' ]);
         ?>
 
-        <hr>
         <p>
-            <label for="<?php echo $this->get_field_id( 'featured image' ); ?>"><?php _e( 'Feautured Image', 'awms' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'featured image' ); ?>"><?php _e( 'Feautured Image', 'lh' ); ?></label>
             <span class="image-container">
                 <?php if ( ! empty( $instance['featured_image'] ) ) : ?>
                     <img src="<?php echo $instance['featured_image']; ?>" style="max-width: 100%; margin: 5px 0; display: block;">

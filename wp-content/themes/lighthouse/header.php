@@ -2,11 +2,14 @@
 <html>
     <head>
 
+        <link href='https://fonts.googleapis.com/css?family=Raleway:300,900,600' rel='stylesheet' type='text/css'>
+
         <?php wp_head(); ?>
 
     </head>
     <body <?php if ( is_front_page() ) body_class(); ?> >
-        <nav class="navbar navbar-default">
+        <!-- for fixed navbar add class: navbar-fixed-top -->
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
