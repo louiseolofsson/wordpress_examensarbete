@@ -433,7 +433,6 @@ DESCRIPTION WIDGET CSS - not used
 
         .products a:hover{
             text-decoration: none;
-            color: #000000;
         }
 
         .products h3{
@@ -459,7 +458,7 @@ DESCRIPTION WIDGET CSS - not used
 
         .add_to_cart_button{
             color: #ffffff;
-            background-color: #aaaaaa;
+            background-color: #1aba9d; /* aaaaaa */
             height: 40px;
             width: 100%;
             display: block;
@@ -468,19 +467,39 @@ DESCRIPTION WIDGET CSS - not used
             text-align: center;
         }
 
-        a.added_to_cart.wc-forward {
+        .add_to_cart_button:visited{
+            background-color: #1aba9d;
+            color: #fff;
+        }
+
+        .add_to_cart_button:hover{
+            background-color: #17a78d;
+            color: #fff;
+        }
+
+        a.added_to_cart.wc-forward{
             position: absolute;
             bottom: 10px;
             color: white;
-            background-color: #aaaaaa;
+            background-color: #1aba9d;
             width: 263px;
             padding: 10px;
             right: 15px;
         }
 
+        a.added_to_cart.wc-forward:visited{
+            background-color: #17a78d;
+            color: #fff;
+        }
+
+        a.added_to_cart.wc-forward:hover{
+            background-color: #17a78d;
+            color: #fff;
+        }
+
 /* Variable product */
 .product_type_variable{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 /* Pagenumber at the bottom of /shop */
@@ -567,6 +586,7 @@ DESCRIPTION WIDGET CSS - not used
     color: #000;
     font-size: 15px;
     font-weight: 600;
+    padding-top: 15px;
 }
 
 .value select{
@@ -587,6 +607,7 @@ DESCRIPTION WIDGET CSS - not used
     }
 
         .qty{
+            width: 60px;
             height: 40px;
             font-size: 20px;
             text-align: center;
@@ -601,6 +622,10 @@ DESCRIPTION WIDGET CSS - not used
         background-color: #1aba9d;
         color: #fff;
         border: none;
+    }
+
+    .single_add_to_cart_button:hover{
+        background-color: #17a78d;
     }
 
 /* TABS - Description, Additional Information */
@@ -682,8 +707,72 @@ table.shop_attributes {
         line-height: 1.5em;
     }
 
+/* --------------------------------- CART --------------------------------- */
 
-/* --------------------------------- FOOTER --------------------------------- */
+.page{
+    min-height: 344px;
+}
+
+.woocommerce table.shop_table {
+    border-radius: 0;
+}
+
+table.shop_table thead {
+    font-weight: 600;
+    background-color: rgba(0,0,0,.02);
+}
+
+.woocommerce img, .woocommerce-page img {
+    max-width: 100px;
+}
+
+.woocommerce td.product-name dl.variation {
+    margin: .8em 0 0 0;
+}
+
+.woocommerce td.product-name dl.variation dt {
+    font-weight: 600;
+}
+
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text{
+    width: 150px;
+    height: 35px;
+    vertical-align: top;
+    border: 1px solid #dfdbdf;
+    padding: 8px 6px 8px;
+}
+
+.woocommerce table.shop_table th {
+    font-weight: 600;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    font-weight: 600;
+    border-radius: 0;
+}
+
+.cart_totals{
+    margin-bottom: 50px;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: #1aba9d;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+    background-color: #17a78d;
+}
+
+
+    /* --------------------------------- FOOTER --------------------------------- */
 
 .footer-content{
     background: #262427;

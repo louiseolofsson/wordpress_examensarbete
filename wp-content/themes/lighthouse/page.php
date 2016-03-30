@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <div class="container">
+    <div class="container page">
         <div class="row">
 
-            <div class="col-md-9">
+            <div class="col-md-12">
 
 
                 <ul class="products">
@@ -36,10 +36,8 @@
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php the_title() ?>
+                    <h1> <?php the_title() ?> </h1>
                     <?php the_content() ?>
-
-                    <?php //echo "LOAD TEMPLATE PART FOR CONTENT HERE"; ?>
 
                     <?php //get_template_part( 'template-parts/content', get_post_format() ); ?>
 
@@ -47,9 +45,9 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md">
 
-                <?php get_sidebar(); ?>
+                <?php //get_sidebar(); ?>
 
             </div>
 
