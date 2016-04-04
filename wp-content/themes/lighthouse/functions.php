@@ -86,9 +86,12 @@ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 )
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 
 // 'remove' 'rating'-tab from single-product page
-function lh_woo_remove_reviews_tab($tabs) {
-    unset($tabs['reviews']);
+//function lh_woo_remove_reviews_tab($tabs) {
+    //unset($tabs['reviews']);
     //unset($tabs['additional_information']);
-    return $tabs;
-}
-add_filter( 'woocommerce_product_tabs', 'lh_woo_remove_reviews_tab', 98 );
+    //return $tabs;
+//}
+//add_filter( 'woocommerce_product_tabs', 'lh_woo_remove_reviews_tab', 98 );
+
+// Remove the product rating display on product loops
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );

@@ -6,7 +6,7 @@
             <div class="col-md-12">
 
 
-                <ul class="products">
+                <!--<ul class="products">
                     <?php
 
                     /*
@@ -31,7 +31,7 @@
                      */
 
                     ?>
-                </ul><!--/.products-->
+                </ul> .products-->
 
 
                 <?php while ( have_posts() ) : the_post(); ?>
@@ -42,12 +42,6 @@
                     <?php //get_template_part( 'template-parts/content', get_post_format() ); ?>
 
                 <?php endwhile; ?>
-
-            </div>
-
-            <div class="col-md">
-
-                <?php //get_sidebar(); ?>
 
             </div>
 

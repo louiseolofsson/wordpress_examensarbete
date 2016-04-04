@@ -30,6 +30,10 @@ ins {
     text-decoration: none;
 }
 
+textarea{
+    resize: none;
+}
+
 
 /* this is what bootstrap sets, 750px
 @media (min-width: 768px) {
@@ -424,6 +428,7 @@ DESCRIPTION WIDGET CSS - not used
     .product-col{
         text-align: center;
         padding-bottom: 60px;
+        min-height: 476px;
     }
 
         .attachment-shop_catalog{
@@ -443,7 +448,8 @@ DESCRIPTION WIDGET CSS - not used
             color: #3d3d3d;
         }
 
-            .amount{
+            p.price .amount{
+                font-size: 20px;
             }
 
         span.onsale {
@@ -488,13 +494,38 @@ DESCRIPTION WIDGET CSS - not used
         }
 
         a.added_to_cart.wc-forward:visited{
-            background-color: #17a78d;
+            background-color: #1aba9d;
             color: #fff;
         }
 
         a.added_to_cart.wc-forward:hover{
             background-color: #17a78d;
             color: #fff;
+        }
+
+        .product_type_grouped{
+            color: #ffffff;
+            background-color: #1aba9d; /* aaaaaa */
+            height: 40px;
+            width: 100%;
+            display: block;
+            margin: 20px 0 0 0;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .product_type_grouped:visited{
+            background-color: #1aba9d;
+            color: #fff;
+        }
+
+        .product_type_grouped:hover{
+            background-color: #17a78d;
+            color: #fff;
+        }
+
+        .group_table{
+            margin-bottom: 10px;
         }
 
 /* Variable product */
@@ -581,6 +612,14 @@ DESCRIPTION WIDGET CSS - not used
         max-width: 100px;
     }
 
+/* Rating displayed under single-product heading */
+.woocommerce-product-rating{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 1px solid #aaa;
+    padding: 10px 0;
+}
+
 /* SELECT - the attributes on a product (size, color, etc) */
 .label label{
     color: #000;
@@ -594,6 +633,10 @@ DESCRIPTION WIDGET CSS - not used
     width: 200px;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.reset_variations{
+    margin-left: 7px;
 }
 
 /* The entire add-to-cart + qty 'area' */
@@ -627,6 +670,13 @@ DESCRIPTION WIDGET CSS - not used
     .single_add_to_cart_button:hover{
         background-color: #17a78d;
     }
+
+/* Product-tags & Category */
+.tagged_as,
+.posted_in{
+    display: block;
+    margin-top: 10px;
+}
 
 /* TABS - Description, Additional Information */
 ul.tabs{
@@ -674,6 +724,7 @@ ul.tabs li {
         color: #5e5e5e;
         text-shadow: 0 1px 0 rgba(255,255,255,.8);
         text-decoration: none;
+        letter-spacing: 0.062em;
     }
 
 table.shop_attributes {
@@ -707,30 +758,101 @@ table.shop_attributes {
         line-height: 1.5em;
     }
 
+    /* Reviews - tab */
+    .panel h3{
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+    }
+
+    .comment_container{
+        border-bottom: 1px solid #eee;
+        margin-bottom: 15px;
+    }
+
+        .avatar{
+            border-radius: 50%;
+        }
+
+    .stars{
+    font-size: 20px;
+    letter-spacing: 1em;
+    }
+
+    .stars a:visited{
+        text-decoration: none;
+    }
+
+    .stars a:hover{
+        text-decoration: none;
+    }
+
+    .stars .active{
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    .comment-form textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .comment-form-author{
+        display: inline-block;
+    }
+
+    .comment-form-email{
+        display: inline-block;
+    }
+
+        #commentform input {
+            display: inline-block;
+            height: 35px;
+            margin-right: 15px;
+        }
+
+    .form-submit{
+        display: inline-block;
+    }
+
+        .form-submit .submit{
+            height: 40px;
+            width: 200px;
+            background-color: #1aba9d;
+            color: #fff;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .form-submit .submit:hover{
+            background-color: #17a78d;
+        }
+
 /* --------------------------------- CART --------------------------------- */
 
 .page{
     min-height: 344px;
 }
 
-.woocommerce table.shop_table {
+.woocommerce table.shop_table{
     border-radius: 0;
 }
 
-table.shop_table thead {
+table.shop_table thead{
     font-weight: 600;
     background-color: rgba(0,0,0,.02);
 }
 
-.woocommerce img, .woocommerce-page img {
+.woocommerce img, .woocommerce-page img{
     max-width: 100px;
 }
 
-.woocommerce td.product-name dl.variation {
+.woocommerce td.product-name dl.variation{
     margin: .8em 0 0 0;
 }
 
-.woocommerce td.product-name dl.variation dt {
+.woocommerce td.product-name dl.variation dt{
     font-weight: 600;
 }
 
@@ -744,11 +866,14 @@ table.shop_table thead {
     padding: 8px 6px 8px;
 }
 
-.woocommerce table.shop_table th {
+.woocommerce table.shop_table th{
     font-weight: 600;
 }
 
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button{
     font-weight: 600;
     border-radius: 0;
 }
@@ -760,19 +885,64 @@ table.shop_table thead {
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
-.woocommerce input.button.alt {
+.woocommerce input.button.alt{
     background-color: #1aba9d;
 }
 
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
+.woocommerce input.button.alt:hover{
     background-color: #17a78d;
 }
 
+/* --------------------------------- MY-ACCOUNT --------------------------------- */
 
-    /* --------------------------------- FOOTER --------------------------------- */
+.myaccount_user{
+    border-bottom: 1px solid #dfdbdf;
+    padding-bottom: 20px;
+}
+
+.myaccount_address{
+    border-bottom: 1px solid #dfdbdf;
+    padding-bottom: 20px;
+}
+
+/* Edit account */
+.edit-account input{
+    height: 35px;
+}
+
+.edit-account legend{
+    padding-top: 20px;
+}
+
+.edit-account-btn{
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    vertical-align: top;
+    background-color: #1aba9d !important;
+    color: #fff !important;
+    border: none;
+    margin-left: 3px !important;
+}
+
+.edit-account-btn:hover{
+    background-color: #17a78d !important;
+}
+
+/* Edit Billing */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea{
+    height: 35px;
+}
+
+.select2-container{
+    border-radius: 0;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
 
 .footer-content{
     background: #262427;
