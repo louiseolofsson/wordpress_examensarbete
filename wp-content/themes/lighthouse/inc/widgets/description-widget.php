@@ -19,11 +19,30 @@ class Description_Widget extends WP_Widget {
 
         extract( $args );
 
-        //echo $before_widget;
+        global $sidebars_widgets;
+        global $class;
+        $count = count ($sidebars_widgets['footer-widget-sidebar-1']);
+        switch ( $count ) {
+            case '1':
+                $class = 'col-md-12';
+                break;
+            case '2':
+                $class = 'col-md-6 col-sm-6';
+                break;
+            case '3':
+                $class = 'col-md-4 col-sm-6';
+                break;
+            case '4':
+                $class = 'col-md-3 col-sm-6';
+                break;
+            default:
+                $class = 'col-md-4 col-sm-6';
+                break;
+        }
 
         ?>
 
-        <div class="col-md-3 description-widget">
+        <div class="<?php echo $class; ?> description-widget">
 
             <?php if ( $featured_image = @$instance['featured_image'] ) : ?>
                 <!--<div class="service-image" style="background-image: url(<?php echo $featured_image ?>);"></div>-->
@@ -40,7 +59,6 @@ class Description_Widget extends WP_Widget {
 
         <?php
 
-        //echo $after_widget;
     }
 
     public function update( $new_instance, $old_instance ){

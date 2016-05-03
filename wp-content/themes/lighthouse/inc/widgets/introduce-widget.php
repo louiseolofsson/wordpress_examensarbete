@@ -19,8 +19,6 @@ class Introduce_Widget extends WP_Widget {
 
         extract( $args );
 
-        //echo $before_widget;
-
         ?>
 
         <div class="introduce-widget">
@@ -33,9 +31,9 @@ class Introduce_Widget extends WP_Widget {
             <?php if( $introduce_url = @$instance[ 'introduce-url' ] ) : ?>
                 <a href="<?php echo esc_url( $introduce_url ); ?>" class="introduceButton" style="background: <?php if( $introduce_btn_color = @$instance[ 'introduce-btn-color' ] ) :  echo "#" . $introduce_btn_color; endif; ?>;">
 
-                        <?php if( $introduce_button_name = @$instance[ 'introduce-button-name' ] ) : ?>
-                            <?php echo $introduce_button_name; ?>
-                        <?php endif; ?>
+                    <?php if( $introduce_button_name = @$instance[ 'introduce-button-name' ] ) : ?>
+                        <?php echo $introduce_button_name; ?>
+                    <?php endif; ?>
 
                 </a>
             <?php endif; ?>
@@ -45,7 +43,6 @@ class Introduce_Widget extends WP_Widget {
 
         <?php
 
-        //echo $after_widget;
     }
 
     public function update( $new_instance, $old_instance ){

@@ -53,7 +53,7 @@ function lh_register_widgets_init() {
         'second-introduce-widget-sidebar' => __( 'Second Introduce - Widget', 'lh' ),
         'team-widget-sidebar' => __( 'Team Members - Widget', 'lh' ),
         'footer-widget-sidebar-1' => __( 'Footer Sidebar 1', 'lh' ),
-        'footer-widget-sidebar-2' => __( 'Footer Sidebar 2', 'lh' )
+        'social-widgetarea' => __( 'Social Widgetarea', 'lh' )
     );
 
     /*

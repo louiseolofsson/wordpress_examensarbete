@@ -23,7 +23,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default-logotype
     $wp_customize->add_setting( 'lh_head_options_logo', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/CottageFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -42,9 +42,9 @@ function lh_customize_register( $wp_customize ){
         'title'     => __( 'Heading on Image', 'lh' ),
         'panel'     => 'lh_head_options_panel'
     ) );
-    // Setting - Default-value "Your own heading"
+    // Setting
     $wp_customize->add_setting( 'lh_head_options_title', array(
-        'default'               => 'Your own heading',
+        'default'               => 'Lighthouse',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -56,7 +56,7 @@ function lh_customize_register( $wp_customize ){
 
     // Setting - Default-value "Your own subheading"
     $wp_customize->add_setting( 'lh_head_options_subtitle', array(
-        'default'               => 'Your own subheading',
+        'default'               => 'Welcome to your lighthouse-theme',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -84,7 +84,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default-value "Your own heading"
     $wp_customize->add_setting( 'lh_company_info_title', array(
-        'default'               => 'Your own heading',
+        'default'               => 'Your company qualities',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -96,7 +96,7 @@ function lh_customize_register( $wp_customize ){
 
     // Setting - Default-value "Your own subheading"
     $wp_customize->add_setting( 'lh_company_info_subtitle', array(
-        'default'               => 'Your own subheading',
+        'default'               => 'Below you can specify four comapny qualities',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -115,7 +115,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_qual1_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/ApprovalFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -131,7 +131,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 1 Title
     // Setting
     $wp_customize->add_setting( 'lh_company_qual1_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -143,7 +143,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 1 text
     // Setting
     $wp_customize->add_setting( 'lh_company_qual1_text', array(
-        'default'               => 'Write about a company quality',
+        'default'               => 'Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -161,7 +161,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_qual2_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/OvertimeFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -177,7 +177,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 2 Title
     // Setting - Default-value "Your own heading"
     $wp_customize->add_setting( 'lh_company_qual2_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -190,7 +190,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 2 Subtitle
     // Setting - Default-value "Your own subheading"
     $wp_customize->add_setting( 'lh_company_qual2_text', array(
-        'default'               => 'Write about a company quality',
+        'default'               => 'Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -208,7 +208,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_qual3_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/OrganizationFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -224,7 +224,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 3 Title
     // Setting - Default-value "Your own heading"
     $wp_customize->add_setting( 'lh_company_qual3_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -237,7 +237,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 3 text
     // Setting - Default-value "Your own subheading"
     $wp_customize->add_setting( 'lh_company_qual3_text', array(
-        'default'               => 'Write about a company quality',
+        'default'               => 'Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -255,7 +255,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_qual4_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/PrivateCloudFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -271,7 +271,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 4 Title
     // Setting - Default-value "Your own heading"
     $wp_customize->add_setting( 'lh_company_qual4_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -284,7 +284,7 @@ function lh_customize_register( $wp_customize ){
     // Company qualities 4 text
     // Setting - Default-value "Your own subheading"
     $wp_customize->add_setting( 'lh_company_qual4_text', array(
-        'default'               => 'Write about a company quality',
+        'default'               => 'Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight content slider offering you smooth and great-looking animations.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -313,7 +313,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_about1_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/ComboChartFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -328,7 +328,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Company About us 1 Title
     $wp_customize->add_setting( 'lh_company_about1_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -339,7 +339,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Company about us 1 text
     $wp_customize->add_setting( 'lh_company_about1_text', array(
-        'default'               => 'Write about your company',
+        'default'               => 'Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -358,7 +358,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_about2_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/UserGroups-104.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -373,7 +373,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Company about us 2 Title - setting
     $wp_customize->add_setting( 'lh_company_about2_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -385,7 +385,7 @@ function lh_customize_register( $wp_customize ){
 
     // Company about us 2 text - setting
     $wp_customize->add_setting( 'lh_company_about2_text', array(
-        'default'               => 'Write about a company',
+        'default'               => 'Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -404,7 +404,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Default picture to quality
     $wp_customize->add_setting( 'lh_company_about3_pic', array(
-        'default'               => 'http://localhost/wordpress_examensarbete/wp-content/uploads/2016/01/twitter.png',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/MindMapFilled-100.png',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -419,7 +419,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Company about us 3 Title - setting
     $wp_customize->add_setting( 'lh_company_about3_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR OWN TITLE!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -431,7 +431,7 @@ function lh_customize_register( $wp_customize ){
 
     // Company about us 3 text - setting
     $wp_customize->add_setting( 'lh_company_about3_text', array(
-        'default'               => 'Write about a company',
+        'default'               => 'Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -474,7 +474,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     //Setting - TITLE
     $wp_customize->add_setting( 'lh_team_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'YOUR TEAM',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control - TITLE
@@ -485,7 +485,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     //Setting - SUBTITLE
     $wp_customize->add_setting( 'lh_team_subtitle', array(
-        'default'               => 'Your own subtitle',
+        'default'               => 'Prove that to you have real people working for you',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control - SUBTITLE
@@ -526,7 +526,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     //Setting - TITLE
     $wp_customize->add_setting( 'lh_pic_text_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'OUR NEWS',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control - TITLE
@@ -537,7 +537,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     //Setting - SUBTITLE
     $wp_customize->add_setting( 'lh_pic_text_subtitle', array(
-        'default'               => 'Your own subtitle',
+        'default'               => 'Look at what we have to show you',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control - SUBTITLE
@@ -553,7 +553,7 @@ function lh_customize_register( $wp_customize ){
         'title'     => __( '1st Picture & Text', 'lh' ),
         'panel'     => 'lh_picture_text_panel'
     ) );
-    // Setting - (Default?)
+    // Setting
     $wp_customize->add_setting( 'lh_pic', array(
         'default'               => '',
         'sanitize_callback'     => 'esc_url_raw'
@@ -570,7 +570,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Title
     $wp_customize->add_setting( 'lh_title', array(
-        'default'               => 'Your own title',
+        'default'               => 'Some interesting title',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -581,7 +581,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting
     $wp_customize->add_setting( 'lh_text', array(
-        'default'               => 'Write something about your company',
+        'default'               => 'Here you can write som information about your company or a product. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -614,7 +614,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - Title
     $wp_customize->add_setting( 'lh_title2', array(
-        'default'               => 'Your own title',
+        'default'               => 'Your own title!',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control
@@ -625,7 +625,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting
     $wp_customize->add_setting( 'lh_text2', array(
-        'default'               => 'Write something about your company',
+        'default'               => 'Here you can write som information about your company or a product. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.',
         'sanitize_callback'     => 'lh_sanitize_text'
     ) );
     // Control

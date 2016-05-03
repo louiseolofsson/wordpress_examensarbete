@@ -19,8 +19,6 @@ class Social_Widget extends WP_Widget {
 
         extract( $args );
 
-        //echo $before_widget;
-
         ?>
 
         <div class="social-widget">
@@ -39,7 +37,6 @@ class Social_Widget extends WP_Widget {
 
         <?php
 
-        //echo $after_widget;
     }
 
     public function update( $new_instance, $old_instance ){

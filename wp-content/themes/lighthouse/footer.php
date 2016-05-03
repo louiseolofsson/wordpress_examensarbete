@@ -1,17 +1,9 @@
 
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
+        <div class="container-fluid footer-content">
+            <div class="row">
 
-                    <div>
-                        <?php if ( dynamic_sidebar( 'footer-widget-sidebar-1' ) ) : else : endif; ?>
-                    </div>
+                <?php if ( dynamic_sidebar( 'footer-widget-sidebar-1' ) ) : else : endif; ?>
 
-                    <div class="footer-widgetarea-4 col-md-3">
-                        <?php if ( dynamic_sidebar( 'footer-widget-sidebar-2' ) ) : else : endif; ?>
-                    </div>
-
-                </div>
             </div>
         </div>
 

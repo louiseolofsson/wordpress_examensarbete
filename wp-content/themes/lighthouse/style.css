@@ -7,18 +7,13 @@ Text Domain: lh
 */
 
 body{
-    background: #fff; /* EEE9F0 */
+    background: url("/images/lighthouse.jpg"); /* EEE9F0 */
     font-family: 'Raleway', sans-serif;
     padding-top: 58px;
 }
 
 body.custom-background{
     background-size: cover;
-}
-
-@media screen and (min-width: 1200px){
-    .container{
-    }
 }
 
 ul{
@@ -64,6 +59,11 @@ textarea{
         overflow: hidden;
         margin-top: 10px;
     }
+
+
+.content-site{
+    background-color: #fff;
+}
 
 /* ------------------------------ FIRST CONTENT - HEADING & SUBHEADING ------------------------------ */
 
@@ -141,7 +141,7 @@ textarea{
 
 .third-content {
     background: #262427;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     /*padding: 110px 60px;*/
     text-align: center;
@@ -230,9 +230,10 @@ DESCRIPTION WIDGET CSS - not used
 
 .fourth-content{
     background-color: rgba(155,155,155,0.5);
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
-    padding: 150px 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
     text-align: center;
 }
 
@@ -283,7 +284,7 @@ DESCRIPTION WIDGET CSS - not used
 
 .fifth-content{
     background: #fff;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 80px 40px;
     text-align: center;
@@ -333,7 +334,7 @@ DESCRIPTION WIDGET CSS - not used
 
 .sixth-content{
     background: #262427;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding: 80px 40px;
     text-align: center;
@@ -343,7 +344,7 @@ DESCRIPTION WIDGET CSS - not used
 
 .seventh-content{
     background: #fff;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     padding-bottom: 100px;
     color: #5C5C5C;
@@ -373,11 +374,15 @@ DESCRIPTION WIDGET CSS - not used
 .eighth-content{
     /*background: rgba(62, 62, 62, 0.7);*/
     background: rgba(62, 62, 62, 0.5);
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
-    padding: 210px 60px;
+    padding: 100px 60px;
     text-align: center;
 }
+
+    .description-widget-textarea p{
+        margin-top: 10px;
+    }
 
 /* --------------------------------- SAMPLE PAGE --------------------------------- */
 
@@ -946,20 +951,16 @@ table.shop_table thead{
 
 .footer-content{
     background: #262427;
-    width: 100%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
-    display: inline-block;
     color: #888888;
 }
 
-    .footer-widgetarea-1,
-    .footer-widgetarea-2,
-    .footer-widgetarea-3,
-    .footer-widgetarea-4{
+    .widgetarea-social{
+        padding-top: 40px;
         display: inline-block;
-        padding-left: 20px;
     }
 
         .social-widget{

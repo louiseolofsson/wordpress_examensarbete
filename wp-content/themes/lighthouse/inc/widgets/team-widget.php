@@ -18,7 +18,6 @@ class Team_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
 
         extract( $args );
-        //echo $before_widget;
 
         global $sidebars_widgets;
         global $class;
@@ -43,7 +42,7 @@ class Team_Widget extends WP_Widget {
 
         ?>
 
-            <div class="<?php echo $class ?> team-widget-sidebar-row">
+            <div class="<?php echo $class; ?> team-widget-sidebar-row">
 
                 <?php if ( $featured_image = @$instance['featured_image'] ) : ?>
                     <!--<div class="service-image" style="background-image: url(<?php echo $featured_image ?>);"></div>-->
@@ -61,7 +60,6 @@ class Team_Widget extends WP_Widget {
 
         <?php
 
-        //echo $after_widget;
     }
 
     public function update( $new_instance, $old_instance ){
