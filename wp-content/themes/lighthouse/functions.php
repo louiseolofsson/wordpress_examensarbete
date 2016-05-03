@@ -17,7 +17,18 @@ function lh_after_setup_theme() {
 
     add_theme_support( 'title-tag' );
 
-    add_theme_support( 'custom-background' );
+    //add_theme_support( 'custom-background' );
+
+    add_theme_support('custom-background',
+        array(
+            'default-color' => 'fff',
+            'default-image' => get_template_directory_uri() . '/assets/images/lighthouse.jpg',
+            'default-repeat'     => 'no-repeat',
+            'default-position-x' => 'center',
+            'default-attachment' => 'fixed',
+        )
+    );
+
 
     // Make sure that the theme supports woocommerce and gets rid of the message that says:
     // “Your theme does not declare WooCommerce support”. You add_theme_support as below

@@ -555,7 +555,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting
     $wp_customize->add_setting( 'lh_pic', array(
-        'default'               => '',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/lighthouse.jpg',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -599,7 +599,7 @@ function lh_customize_register( $wp_customize ){
     ) );
     // Setting - (Default?)
     $wp_customize->add_setting( 'lh_pic2', array(
-        'default'               => '',
+        'default'               => get_stylesheet_directory_uri() . '/assets/images/lighthouse.jpg',
         'sanitize_callback'     => 'esc_url_raw'
     ) );
     // Control
@@ -637,6 +637,19 @@ function lh_customize_register( $wp_customize ){
         'setting'   => 'lh_text2'
     ) );
 
+
+    /**
+     * -------------------------------------------------
+     * EIGHTH CONTENT
+     * -------------------------------------------------
+     */
+    $wp_customize->add_panel( 'lh_social_panel', array(
+        'title'         => __( 'Eighth Content - Social Widgets' ),
+        'capability'    => 'edit_theme_options',
+        'priority'      => 9
+    ) );
+
+
     /**
      * -------------------------------------------------
      * FOOTER CONTENT
@@ -645,7 +658,7 @@ function lh_customize_register( $wp_customize ){
     $wp_customize->add_panel( 'lh_footer_panel', array(
         'title'         => __( 'Footer Content' ),
         'capability'    => 'edit_theme_options',
-        'priority'      => 9
+        'priority'      => 10
     ) );
 
 

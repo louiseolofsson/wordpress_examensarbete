@@ -9,7 +9,7 @@
     </head>
     <body <?php if ( is_front_page() ) body_class(); ?> >
         <!-- for fixed navbar add class: navbar-fixed-top -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

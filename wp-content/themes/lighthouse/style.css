@@ -2,14 +2,14 @@
 Theme name: Lighthouse
 Author: Louise Olofsson
 Version: 1.0
-Description: This is my lighthouse theme! A simple one-page theme that you can apply wooCommerce to and have a online shop.
+Description: This is my lighthouse theme! A simple one-page theme that you can apply wooCommerce to and have a online shop. Just open the customizer and you'll see what your page can look like.
 Text Domain: lh
 */
 
 body{
-    background: url("/images/lighthouse.jpg"); /* EEE9F0 */
+    background: #fff; /* EEE9F0 */
     font-family: 'Raleway', sans-serif;
-    padding-top: 58px;
+    /*padding-top: 58px;*/
 }
 
 body.custom-background{
@@ -48,9 +48,15 @@ textarea{
     margin-bottom: 0;
 }
 
-.navbar-header{
+    .navbar ul{
+        /*margin-top: 12px;*/
+    }
 
-}
+        .navbar li{
+            display: inline-block;
+            list-style: none;
+            padding-right: 10px;
+        }
 
     .navbar-logo img{
         height: 30px;
@@ -60,15 +66,10 @@ textarea{
         margin-top: 10px;
     }
 
-
-.content-site{
-    background-color: #fff;
-}
-
 /* ------------------------------ FIRST CONTENT - HEADING & SUBHEADING ------------------------------ */
 
 .first-content{
-    min-height: 550px;
+    min-height: 450px;
     width: 100%;
     /*background: rgba(0, 0, 0, 0.3);*/
 }
@@ -80,7 +81,7 @@ textarea{
     .first-content-heading{
         text-align: center;
         color: #fff;
-        margin-top: 80px;
+        margin-top: 130px;
     }
 
     .firstContentHeadingH1{
@@ -149,12 +150,12 @@ textarea{
 
     .about-darkgrey{
         background: #262427;
-        padding: 145px 67px;
+        padding: 175px 67px;
     }
 
     .about-white{
         background: #fff;
-        padding: 145px 67px;
+        padding: 175px 67px;
     }
 
         .thirdContentAboutTitle{
@@ -286,7 +287,7 @@ DESCRIPTION WIDGET CSS - not used
     background: #fff;
     /*width: 100%;*/
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 95px 40px;
     text-align: center;
     color: #5C5C5C;
 }
@@ -387,7 +388,13 @@ DESCRIPTION WIDGET CSS - not used
 /* --------------------------------- SAMPLE PAGE --------------------------------- */
 
 .sample-page{
-    height: 500px;
+    min-height: 410px;
+}
+
+/* --------------------------------- SEARCH PAGE --------------------------------- */
+
+.search-page{
+    min-height: 410px;
 }
 
 /* --------------------------------- ARCHIVE PAGE --------------------------------- */
@@ -397,10 +404,15 @@ DESCRIPTION WIDGET CSS - not used
     width: 350px;
     margin-right: 30px;
     margin-bottom: 30px;
+    vertical-align: top;
 }
 
 .archive-template-ul li{
     list-style: none;
+}
+
+.searchform{
+    margin-top: 25px;
 }
 
 
@@ -837,7 +849,7 @@ table.shop_attributes {
 /* --------------------------------- CART --------------------------------- */
 
 .page{
-    min-height: 344px;
+    min-height: 410px;
 }
 
 .woocommerce table.shop_table{

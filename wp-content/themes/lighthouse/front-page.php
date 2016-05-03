@@ -16,8 +16,19 @@
         <div class="container-fluid fourth-content">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <!-- TEXT TO INTRODUCE SOMETHING, WITH BUTTON THAT LINKS TO THAT SOMETHING -->
-                    <?php if ( dynamic_sidebar( 'first-introduce-widget-sidebar' ) ) : else : endif; ?>
+
+                    <?php
+
+                    if( is_active_sidebar( 'first-introduce-widget-sidebar' ) ):
+                        dynamic_sidebar( 'first-introduce-widget-sidebar' );
+                    else :
+
+                    the_widget( 'Introduce_Widget', 'introduce-textarea=Check out this stuff - we want to show you something! Our new Online Shop is now avalible.&introduce-button-name=Look at this&introduce-url=http://localhost/wordpress_examensarbete/shop/&introduce-btn-color=1aba9d&');
+
+                    endif;
+
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -29,7 +40,19 @@
     <div class="container-fluid sixth-content">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <?php if ( dynamic_sidebar( 'second-introduce-widget-sidebar' ) ) : else : endif; ?>
+
+                <?php
+
+                if( is_active_sidebar( 'second-introduce-widget-sidebar' ) ):
+                    dynamic_sidebar( 'second-introduce-widget-sidebar' );
+                else :
+
+                    the_widget( 'Introduce_Widget', 'introduce-textarea=Do you have a question?&introduce-button-name=Contact us&introduce-url=http://localhost/wordpress_examensarbete/&introduce-btn-color=1aba9d&');
+
+                endif;
+
+                ?>
+
             </div>
         </div>
     </div>
