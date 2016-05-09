@@ -73,7 +73,7 @@
 
                 the_widget( 'Social_Widget', 'social-url=http://www.facebook.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/Facebook-100.png" );
                 the_widget( 'Social_Widget', 'social-url=http://www.instagram.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/Instagram-100.png" );
-                the_widget( 'Social_Widget', 'social-url=http://www.linkedin.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/Linkedin-100.png" );
+                the_widget( 'Social_Widget', 'social-url=http://www.linkedin.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/LinkedIn-100.png" );
                 the_widget( 'Social_Widget', 'social-url=http://www.twitter.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/Twitter-100.png" );
                 the_widget( 'Social_Widget', 'social-url=http://www.youtube.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/YouTube-104.png" );
                 the_widget( 'Social_Widget', 'social-url=http://www.tumblr.com&featured_image=' . get_stylesheet_directory_uri() . "/assets/images/Tumblr-100.png" );

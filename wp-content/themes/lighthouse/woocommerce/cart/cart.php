@@ -155,7 +155,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 </form>
 
-<a type="button" class="button lh-backward" href="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>"><?php _e( 'Continue Shopping', 'lh' ) ?></a>
+<a type="button" class="button lh-backward" href="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>"><?php _e( 'Fortsätt shoppa', 'lh' ) ?></a>
 
 <div class="cart-collaterals">
 
